@@ -23,13 +23,17 @@ Fonts:
   This CSS uses the provided color palette and beginner-friendly styles.
 */
 
-/* Set up the main font and background color for the whole page */
+/* Set the background image for the entire page */
 body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: #222;
+  background-image: url('CharityWater1.jpg'); /* Replace 'background.jpg' with your image file */
+  background-size: cover; /* Make sure the image covers the entire page */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  font-family: Arial, sans-serif; /* Set a simple font for the page */
+  color: white; /* Set text color to white for better contrast */
+  text-align: center; /* Center-align the text */
 }
 
 /* Add a slight shadow and rounded corners to each section for depth */
@@ -108,26 +112,34 @@ h2 {
   box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
 }
 
-/* Donate Button Styles */
+/* Center the content vertically and horizontally */
+.center-content {
+  position: absolute;
+  top: 50%; /* Move the content down 50% of the page height */
+  left: 50%; /* Move the content right 50% of the page width */
+  transform: translate(-50%, -50%); /* Adjust the position to truly center the content */
+  width: 80%; /* Limit the width of the content for better readability */
+}
+
+/* Style the donate button */
 .donate-button {
   display: inline-block;
-  background-color: #4FCB53; /* Green */
-  color: #fff;
-  padding: 14px 32px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 1.1em;
-  margin-top: 18px;
-  box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
-  transition: background 0.3s, transform 0.2s;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007BFF; /* Blue background */
+  color: white; /* White text */
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Increase font size */
   border: none;
   cursor: pointer;
+  box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
+  transition: background 0.3s, transform 0.2s;
 }
 
 /* Change button color when hovered */
 .donate-button:hover {
-  background-color: #159A48; /* Dark Green */
+  background-color: #0056b3; /* Darker blue on hover */
   transform: translateY(-2px) scale(1.04); /* Slight lift */
 }
 
@@ -195,4 +207,5 @@ section {
   .impact-image {
     width: 300px;
   }
+}
 }
